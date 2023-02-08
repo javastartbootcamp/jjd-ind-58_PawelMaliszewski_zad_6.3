@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int row;
-        int col;
 
         Scanner sc = new Scanner(System.in);
+
+        int row;
 
         do {
             System.out.println("Podaj liczbę wierszy");
@@ -19,6 +19,8 @@ public class Main {
                 row = sc.nextInt();
             }
         } while (!(row >= 1 && row <= 100));
+
+        int col;
 
         do {
             System.out.println("Podaj liczbę kolumn");
@@ -39,11 +41,13 @@ public class Main {
 
         for (int[] array : arrays) {
             for (int cell : array) {
-                System.out.printf("%3d |", cell);
+                System.out.printf("%5d|", cell);
             }
             System.out.println();
-            System.out.println("--------------------------------------------------");
+            for (int cell : array) {
+                System.out.printf("%5s", "------");
+            }
+            System.out.println();
         }
-        sc.close();
     }
 }
