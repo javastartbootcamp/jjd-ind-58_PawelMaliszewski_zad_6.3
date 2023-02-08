@@ -41,11 +41,11 @@ public class Main {
 
         for (int[] array : arrays) {
             for (int cell : array) {
-                System.out.printf("%5d|", cell);
+                System.out.printf("%5d |", cell);
             }
             System.out.println();
             for (int cell : array) {
-                System.out.printf("%5s", "------");
+                System.out.printf("%5s", "-------");
             }
             System.out.println();
         }
